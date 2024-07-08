@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guild Wars II</title>
+  </head>
+  <body>
+    <button class="themeButton">CHANGE THEME</button>
+    <div class="container">
+      <h1>Guild Wars II</h1>
+      <h2>My favorite computer game!</h2>
+
+      <a href="https://en.wikipedia.org/wiki/Guild_Wars_2#" target="_blank">
+        <img
+          class="img-link"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/125/804/original/GW2_5.jpg?1715100463"
+          alt=""
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/126/060/original/dragon.jpg?1715326208"
+          alt="Dragon"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/125/806/original/GW2_3.png?1715100522"
+          alt="Mounts"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/125/848/original/GW2_7.jpg?1715156204"
+          alt="Player"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/125/808/original/GW2_6.jpg?1715100567"
+          alt="Mount"
+        />
+      </div>
+
+      <p>
+        <i>Guild Wars 2</i> is a free-to-play, massively multiplayer online
+        role-playing game developed by ArenaNet and published by NCSoft. Set in
+        the fantasy world of Tyria, the core game follows the re-emergence of
+        Destiny's Edge, a desbanded guild dedicated to fighting Elder Dragons,
+        colossal Lovecraftian-esque entities that have seized control of Tyria
+        in the time since the original Guild Wars (2005), a plot line that
+        concludes in the third expansion End of Dragons (2023). The game takes
+        place in a persistent world with a story that progresses in instanced
+        environments.
+      </p>
+
+      <button class="contactButton">LET'S PLAY TOGETHER!</button>
+
+      <a class="gw-link" href="https://www.guildwars2.com/en/"
+        >Read more about Guild Wars II</a
+      >
+    </div>
+    <footer>
+      Coded with 💜 by
+      <a href="https://www.linkedin.com/in/joicemotamoreira/" target="_blank">
+        Joice</a
+      >
+      with HTML, CSS and JavaScript!
+    </footer>
+
+    <script>
+      function contact() {
+        let name = prompt("Hello, what is your name?");
+        let email = prompt("What is your email?");
+        alert("Thank you " + name + ", I'll be in touch soon! 😉");
+      }
+
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", changeTheme);
+
+      let contactButton = document.querySelector(".contactButton");
+      contactButton.addEventListener("click", contact);
+    </script>
+  </body>
+</html>
